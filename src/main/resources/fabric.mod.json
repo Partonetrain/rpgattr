@@ -1,0 +1,42 @@
+{
+	"schemaVersion": 1,
+	"id": "rpgattr",
+	"version": "${version}",
+	"name": "More Attributes for RPG Series",
+	"description": "Adds compatibility to Spell Engine item configs for many modded attributes",
+	"authors": [
+		"Partonetarin"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rpgattr/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"info.partonetrain.rpgattr.Rpgattr"
+		],
+		"client": [
+			"info.partonetrain.rpgattr.RpgattrClient"
+		]
+	},
+	"mixins": [
+		"rpgattr.mixins.json",
+		{
+			"config": "rpgattr.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.7",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*",
+		"spell_engine": ">=0.12.5+1.20.1"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
