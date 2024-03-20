@@ -1,5 +1,6 @@
 package info.partonetrain.rpgattr;
 
+import net.fabricmc.loader.api.FabricLoader;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -23,6 +24,10 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
         if (mixinClassName.contains("Jewelry")) {
             return Rpgattr.JEWELRY_INSTALLED;
+        }
+
+        if (mixinClassName.contains("ZenithPotion") && FabricLoader.getInstance().isModLoaded("idwtialsimmoedm")) {
+            return Rpgattr.ZENITHATTR_INSTALLED;
         }
 
         return true;
