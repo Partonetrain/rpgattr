@@ -26,10 +26,6 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.JEWELRY_INSTALLED;
         }
 
-        if (mixinClassName.contains("ZenithPotion") && FabricLoader.getInstance().isModLoaded("idwtialsimmoedm")) {
-            return Rpgattr.ZENITHATTR_INSTALLED;
-        }
-
         return true;
     }
 

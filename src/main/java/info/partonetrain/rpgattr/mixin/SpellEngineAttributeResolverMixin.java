@@ -57,8 +57,11 @@ public abstract class SpellEngineAttributeResolverMixin {
 			register(new Identifier("zenith_attributes", "draw_speed"), ALObjects.Attributes.DRAW_SPEED);
 			register(new Identifier("zenith_attributes", "elytra_flight"), ALObjects.Attributes.ELYTRA_FLIGHT);
 			register(new Identifier("zenith_attributes", "fire_damage"), ALObjects.Attributes.FIRE_DAMAGE);
+			register(new Identifier("zenith_attributes", "ghost_health"), ALObjects.Attributes.GHOST_HEALTH);
 			register(new Identifier("zenith_attributes", "healing_received"), ALObjects.Attributes.HEALING_RECEIVED);
 			register(new Identifier("zenith_attributes", "life_steal"), ALObjects.Attributes.LIFE_STEAL);
+			register(new Identifier("zenith_attributes", "prot_pierce"), ALObjects.Attributes.PROT_PIERCE);
+			register(new Identifier("zenith_attributes", "prot_shred"), ALObjects.Attributes.PROT_SHRED);
 		}
 
 	}
