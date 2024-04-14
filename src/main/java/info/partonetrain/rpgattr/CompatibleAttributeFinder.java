@@ -7,15 +7,15 @@ public class CompatibleAttributeFinder {
     
     public static void init(){
         if (Rpgattr.AEA_INSTALLED) {
-            return ;
+            //return ;
         }
 
         if (Rpgattr.REA_INSTALLED) {
-            return ;
+            //return ;
         }
 
         if (Rpgattr.STEP_HEIGHT_INSTALLED) {
-            return ;
+            //return ;
         }
 
         if (!Rpgattr.ZEPHYR_INSTALLED && Rpgattr.ZENITHATTR_INSTALLED) {

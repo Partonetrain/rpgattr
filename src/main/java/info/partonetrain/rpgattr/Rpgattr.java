@@ -34,8 +34,6 @@ public class Rpgattr implements ModInitializer {
 				+ " Zephyr Installed: " + ZEPHYR_INSTALLED
 				+ " ZenithAttr Installed: " + ZENITHATTR_INSTALLED
 		);
-
-		CompatibleAttributeFinder.init();
 	}
 
 	public static void addAttributeToCompat(Attribute attribute, ResourceLocation resourceLocation) {
