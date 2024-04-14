@@ -12,6 +12,11 @@ base {
 
 repositories {
 	maven {
+		name = 'ParchmentMC'
+		url = 'https://maven.parchmentmc.org'
+	}
+
+	maven {
 		name = 'Modrinth'
 		url = 'https://api.modrinth.com/maven'
 		content {
@@ -41,9 +46,12 @@ loom {
 }
 
 dependencies {
-	// To change the versions see the gradle.properties file
+	mappings loom.layered() {
+		officialMojangMappings()
+		parchment("org.parchmentmc.data:parchment-1.20.2:2023.10.08@zip")
+	}
+
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.

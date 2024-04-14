@@ -22,8 +22,20 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (mixinClassName.contains("Jewelry")) {
-            return Rpgattr.JEWELRY_INSTALLED;
+        if (mixinClassName.contains("AdditionalEntityAttributes")) {
+            return Rpgattr.AEA_INSTALLED;
+        }
+
+        if (mixinClassName.contains("ReachEntityAttributes")) {
+            return Rpgattr.REA_INSTALLED;
+        }
+
+        if (mixinClassName.contains("StepHeightEntityAttributes")) {
+            return Rpgattr.STEP_HEIGHT_INSTALLED;
+        }
+
+        if (mixinClassName.contains("Zenith")) {
+            return Rpgattr.ZENITHATTR_INSTALLED;
         }
 
         return true;

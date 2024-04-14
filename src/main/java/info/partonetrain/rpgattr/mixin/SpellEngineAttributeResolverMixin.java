@@ -3,9 +3,7 @@ package info.partonetrain.rpgattr.mixin;
 import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import de.dafuqs.additionalentityattributes.AdditionalEntityAttributes;
 import dev.emi.stepheightentityattribute.StepHeightEntityAttributeMain;
-import dev.shadowsoffire.attributeslib.api.ALObjects;
 import info.partonetrain.rpgattr.Rpgattr;
-import net.minecraft.util.Identifier;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -14,10 +12,10 @@ import net.spell_engine.api.item.AttributeResolver;
 
 import static net.jewelry.api.AttributeResolver.register;
 
+//DEPRECATED
 
-@Mixin(AttributeResolver.class)
 public abstract class SpellEngineAttributeResolverMixin {
-
+	/*
 	@Inject(method = "setup", at = @At("TAIL"), remap = false)
 	private static void init(CallbackInfo info) {
 		if(Rpgattr.AEA_INSTALLED){
@@ -45,24 +43,6 @@ public abstract class SpellEngineAttributeResolverMixin {
 			register(new Identifier("step-height-entity-attribute", "step_height"), StepHeightEntityAttributeMain.STEP_HEIGHT);
 		}
 
-		if(Rpgattr.ZENITHATTR_INSTALLED){
-			register(new Identifier("zenith_attributes", "armor_pierce"), ALObjects.Attributes.ARMOR_PIERCE);
-			register(new Identifier("zenith_attributes", "armor_shred"), ALObjects.Attributes.ARMOR_SHRED);
-			register(new Identifier("zenith_attributes", "arrow_velocity"), ALObjects.Attributes.ARROW_VELOCITY);
-			register(new Identifier("zenith_attributes", "cold_damage"), ALObjects.Attributes.COLD_DAMAGE);
-			register(new Identifier("zenith_attributes", "creative_flight"), ALObjects.Attributes.CREATIVE_FLIGHT);
-			register(new Identifier("zenith_attributes", "crit_chance"), ALObjects.Attributes.CRIT_CHANCE);
-			register(new Identifier("zenith_attributes", "current_hp_damage"), ALObjects.Attributes.CURRENT_HP_DAMAGE);
-			register(new Identifier("zenith_attributes", "dodge_chance"), ALObjects.Attributes.DODGE_CHANCE);
-			register(new Identifier("zenith_attributes", "draw_speed"), ALObjects.Attributes.DRAW_SPEED);
-			register(new Identifier("zenith_attributes", "elytra_flight"), ALObjects.Attributes.ELYTRA_FLIGHT);
-			register(new Identifier("zenith_attributes", "fire_damage"), ALObjects.Attributes.FIRE_DAMAGE);
-			register(new Identifier("zenith_attributes", "ghost_health"), ALObjects.Attributes.GHOST_HEALTH);
-			register(new Identifier("zenith_attributes", "healing_received"), ALObjects.Attributes.HEALING_RECEIVED);
-			register(new Identifier("zenith_attributes", "life_steal"), ALObjects.Attributes.LIFE_STEAL);
-			register(new Identifier("zenith_attributes", "prot_pierce"), ALObjects.Attributes.PROT_PIERCE);
-			register(new Identifier("zenith_attributes", "prot_shred"), ALObjects.Attributes.PROT_SHRED);
-		}
-
 	}
+	 */
 }

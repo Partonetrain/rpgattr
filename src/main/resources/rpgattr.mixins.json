@@ -1,10 +1,11 @@
 {
   "required": true,
   "package": "info.partonetrain.rpgattr.mixin",
+  "plugin": "info.partonetrain.rpgattr.RpgattrMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "JewelryAttributeResolverMixin",
-    "SpellEngineAttributeResolverMixin"
+    "AttributesMixin",
+    "ZenithAttributesMixin"
   ],
   "injectors": {
     "defaultRequire": 1
