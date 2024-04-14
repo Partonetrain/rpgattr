@@ -14,7 +14,9 @@ public class AttributesMixin {
 
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void rpgattr_static_tail(CallbackInfo info) {
+        Rpgattr.LOGGER.info("rpgattr_static_tail: " + Rpgattr.attributesToRegister.size());
         for(Rpgattr.CompatibleAttribute ca : Rpgattr.attributesToRegister){
+            Rpgattr.LOGGER.info(String.valueOf(ca.resourceLocation()));
             if (BuiltInRegistries.ATTRIBUTE.containsKey(ca.resourceLocation())) {
                 Rpgattr.LOGGER.info("RPGAttr tried to register attribute, but registry already contained " + ca.resourceLocation());
             }else{

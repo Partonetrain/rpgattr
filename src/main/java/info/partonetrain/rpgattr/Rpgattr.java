@@ -18,7 +18,7 @@ public class Rpgattr implements ModInitializer {
     public static final Logger LOGGER = LoggerFactory.getLogger("rpgattr");
 
 	public record CompatibleAttribute(Attribute attribute, ResourceLocation resourceLocation){ };
-	public static final List<CompatibleAttribute> attributesToRegister = new ArrayList<>();
+	public static List<CompatibleAttribute> attributesToRegister = new ArrayList<>();
 
 	public static final boolean AEA_INSTALLED = FabricLoader.getInstance().isModLoaded("additionalentityattributes");
 	public static final boolean REA_INSTALLED = FabricLoader.getInstance().isModLoaded("reach-entity-attributes");
