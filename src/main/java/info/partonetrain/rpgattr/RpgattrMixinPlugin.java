@@ -30,10 +30,6 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.REA_INSTALLED;
         }
 
-        if (mixinClassName.contains("StepHeightEntityAttributes")) {
-            return Rpgattr.STEP_HEIGHT_INSTALLED;
-        }
-
         if (mixinClassName.contains("Zenith")) {
             return Rpgattr.ZENITHATTR_INSTALLED;
         }

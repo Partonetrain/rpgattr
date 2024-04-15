@@ -17,8 +17,8 @@ public class CompatibleAttributeFinder {
          */
 
         if (Rpgattr.REA_INSTALLED) {
-            Rpgattr.addAttributeToCompat(ReachEntityAttributes.REACH, new ResourceLocation("reach-entity-attributes", "reach"));
-            Rpgattr.addAttributeToCompat(ReachEntityAttributes.ATTACK_RANGE, new ResourceLocation("reach-entity-attributes", "attack_range"));
+            Rpgattr.addAttributeToCompat(new ResourceLocation("reach-entity-attributes", "reach"), ReachEntityAttributes.REACH);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("reach-entity-attributes", "attack_range"), ReachEntityAttributes.ATTACK_RANGE);
         }
 
         /*
@@ -28,22 +28,22 @@ public class CompatibleAttributeFinder {
          */
 
         if (!Rpgattr.ZEPHYR_INSTALLED && Rpgattr.ZENITHATTR_INSTALLED) {
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.ARMOR_PIERCE, new ResourceLocation("zenith_attributes", "armor_pierce"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.ARMOR_SHRED, new ResourceLocation("zenith_attributes", "armor_shred"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.ARROW_VELOCITY, new ResourceLocation("zenith_attributes", "arrow_velocity"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.COLD_DAMAGE, new ResourceLocation("zenith_attributes", "cold_damage"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.CREATIVE_FLIGHT, new ResourceLocation("zenith_attributes", "creative_flight"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.CRIT_CHANCE, new ResourceLocation("zenith_attributes", "crit_chance"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.CURRENT_HP_DAMAGE, new ResourceLocation("zenith_attributes", "current_hp_damage"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.DODGE_CHANCE, new ResourceLocation("zenith_attributes", "dodge_chance"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.DRAW_SPEED, new ResourceLocation("zenith_attributes", "draw_speed")); //you should use ranged_weapon:haste instead, if available
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.ELYTRA_FLIGHT, new ResourceLocation("zenith_attributes", "elytra_flight"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.FIRE_DAMAGE, new ResourceLocation("zenith_attributes", "fire_damage"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.GHOST_HEALTH, new ResourceLocation("zenith_attributes", "ghost_health"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.HEALING_RECEIVED, new ResourceLocation("zenith_attributes", "healing_received"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.LIFE_STEAL, new ResourceLocation("zenith_attributes", "life_steal"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.PROT_PIERCE, new ResourceLocation("zenith_attributes", "prot_pierce"));
-            Rpgattr.addAttributeToCompat(ALObjects.Attributes.PROT_SHRED, new ResourceLocation("zenith_attributes", "prot_shred"));
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "armor_pierce"), ALObjects.Attributes.ARMOR_PIERCE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "armor_shred"), ALObjects.Attributes.ARMOR_SHRED);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "arrow_velocity"), ALObjects.Attributes.ARROW_VELOCITY);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "cold_damage"), ALObjects.Attributes.COLD_DAMAGE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "creative_flight"), ALObjects.Attributes.CREATIVE_FLIGHT);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "crit_chance"), ALObjects.Attributes.CRIT_CHANCE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "current_hp_damage"), ALObjects.Attributes.CURRENT_HP_DAMAGE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "dodge_chance"), ALObjects.Attributes.DODGE_CHANCE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "draw_speed"), ALObjects.Attributes.DRAW_SPEED); //you should use ranged_weapon:haste instead, if available
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "elytra_flight"), ALObjects.Attributes.ELYTRA_FLIGHT);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "fire_damage"), ALObjects.Attributes.FIRE_DAMAGE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "ghost_health"), ALObjects.Attributes.GHOST_HEALTH);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "healing_received"), ALObjects.Attributes.HEALING_RECEIVED);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "life_steal"), ALObjects.Attributes.LIFE_STEAL);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "prot_pierce"), ALObjects.Attributes.PROT_PIERCE);
+            Rpgattr.addAttributeToCompat(new ResourceLocation("zenith_attributes", "prot_shred"), ALObjects.Attributes.PROT_SHRED);
         }
     }
 }

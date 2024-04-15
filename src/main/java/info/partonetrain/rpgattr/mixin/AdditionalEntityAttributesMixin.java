@@ -15,7 +15,7 @@ public class AdditionalEntityAttributesMixin {
 
     @Inject(method = "register", at = @At(value = "RETURN"), cancellable = true)
     private static void rpgattr_cancel_aea_reg(String name, double base, double min, double max, CallbackInfoReturnable<Attribute> cir, @Local Attribute attribute) {
-        Rpgattr.addAttributeToCompat(attribute, new ResourceLocation("additionalentityattributes", name));
+        Rpgattr.addAttributeToCompat(new ResourceLocation("additionalentityattributes", name), attribute);
         cir.setReturnValue(attribute);
     }
 }
