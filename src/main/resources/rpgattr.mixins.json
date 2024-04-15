@@ -4,7 +4,9 @@
   "plugin": "info.partonetrain.rpgattr.RpgattrMixinPlugin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
+    "AdditionalEntityAttributesMixin",
     "AttributesMixin",
+    "ReachEntityAttributesMixin",
     "ZenithAttributesMixin"
   ],
   "injectors": {

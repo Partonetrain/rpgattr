@@ -1,22 +1,31 @@
 package info.partonetrain.rpgattr;
 
+import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.resources.ResourceLocation;
 
 public class CompatibleAttributeFinder {
-    
+
+
     public static void init(){
+
+        /*
         if (Rpgattr.AEA_INSTALLED) {
-            //return ;
+            //done in AdditionalEntityAttributesMixin because the attribute constant
+            //is set and registered by the same method
         }
+         */
 
         if (Rpgattr.REA_INSTALLED) {
-            //return ;
+            Rpgattr.addAttributeToCompat(ReachEntityAttributes.REACH, new ResourceLocation("reach-entity-attributes", "reach"));
+            Rpgattr.addAttributeToCompat(ReachEntityAttributes.ATTACK_RANGE, new ResourceLocation("reach-entity-attributes", "attack_range"));
         }
 
+        /*
         if (Rpgattr.STEP_HEIGHT_INSTALLED) {
-            //return ;
+            Step Height already mixes into Attributes.class to register its attribute, so it should work out-of-the-box
         }
+         */
 
         if (!Rpgattr.ZEPHYR_INSTALLED && Rpgattr.ZENITHATTR_INSTALLED) {
             Rpgattr.addAttributeToCompat(ALObjects.Attributes.ARMOR_PIERCE, new ResourceLocation("zenith_attributes", "armor_pierce"));
