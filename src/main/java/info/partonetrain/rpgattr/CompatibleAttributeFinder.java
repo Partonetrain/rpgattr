@@ -3,6 +3,7 @@ package info.partonetrain.rpgattr;
 import com.jamieswhiteshirt.reachentityattributes.ReachEntityAttributes;
 import dev.shadowsoffire.attributeslib.api.ALObjects;
 import net.minecraft.resources.ResourceLocation;
+import vazkii.botania.common.handler.PixieHandler;
 
 public class CompatibleAttributeFinder {
 
@@ -15,6 +16,10 @@ public class CompatibleAttributeFinder {
             //is set and registered by the same method
         }
          */
+
+        if(Rpgattr.BOTANIA_INSTALLED){
+            Rpgattr.addAttributeToCompat(new ResourceLocation("botania", "pixie_spawn_chance"), PixieHandler.PIXIE_SPAWN_CHANCE);
+        }
 
         if (Rpgattr.REA_INSTALLED) {
             Rpgattr.addAttributeToCompat(new ResourceLocation("reach-entity-attributes", "reach"), ReachEntityAttributes.REACH);

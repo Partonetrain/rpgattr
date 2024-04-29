@@ -26,6 +26,10 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.AEA_INSTALLED;
         }
 
+        if (mixinClassName.contains("Botania")) {
+            return Rpgattr.BOTANIA_INSTALLED;
+        }
+
         if (mixinClassName.contains("ReachEntityAttributes")) {
             return Rpgattr.REA_INSTALLED;
         }

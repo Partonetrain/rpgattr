@@ -31,6 +31,8 @@ repositories {
 	maven {
 		url = "https://jitpack.io"
 	}
+	// Botania
+	maven { url = "https://maven.blamejared.com/" }
 }
 
 loom {
@@ -60,10 +62,7 @@ dependencies {
 	modImplementation("maven.modrinth:fakerlib:${project.fakerlib_ver}")
 	modImplementation("maven.modrinth:zenith-attributes:${project.zenith_attributes_ver}")
 
-
-	modImplementation("maven.modrinth:spell-engine:${project.spell_engine_ver}-fabric")
-	modImplementation("maven.modrinth:spell-power:${project.spell_power_ver}-fabric")
-	modImplementation("maven.modrinth:jewelry:${project.jewelry_ver}-fabric")
+	modImplementation "vazkii.botania:Botania-xplat:${project.botania_version}"
 
 	modImplementation "com.github.emilyploszaj:step-height-entity-attribute:v${project.step_height_ver}"
 

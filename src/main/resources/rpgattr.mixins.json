@@ -6,7 +6,10 @@
   "mixins": [
     "AdditionalEntityAttributesMixin",
     "AttributesMixin",
+    "BotaniaPixieHandlerMixin",
+    "PlayerMixin",
     "ReachEntityAttributesMixin",
+    "ZenithAttributesBotaniaCritMixin",
     "ZenithAttributesMixin"
   ],
   "injectors": {
