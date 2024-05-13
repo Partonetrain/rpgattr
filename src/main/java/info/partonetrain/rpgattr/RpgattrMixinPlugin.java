@@ -28,7 +28,7 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
 
         if (mixinClassName.contains("Botania")) {
             if(mixinClassName.contains("Zenith")) { //for ZenithAttributesBotaniaCritMixin
-                return Rpgattr.ZENITHATTR_INSTALLED;
+                return Rpgattr.ZENITHATTR_INSTALLED && Rpgattr.BOTANIA_INSTALLED;
             }
             return Rpgattr.BOTANIA_INSTALLED;
         }
