@@ -45,6 +45,7 @@ loom {
 		}
 	}
 
+	accessWidenerPath = file("src/main/resources/rpgattr.accesswidener")
 }
 
 dependencies {
