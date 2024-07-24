@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 @Mixin(Player.class)
 public class PlayerMixin {
     @ModifyVariable(method = "attack(Lnet/minecraft/world/entity/Entity;)V", at = @At("STORE"), ordinal = 2) //"bl3"
-    public boolean attack(boolean value) {
+    public boolean checkCritGamerule(boolean value) {
         if(!((Player)(Object)this).level().isClientSide && !((Player) (Object) this).level().getGameRules().getBoolean(Rpgattr.ALLOW_VANILLA_CRITS)){
             return false;
         }

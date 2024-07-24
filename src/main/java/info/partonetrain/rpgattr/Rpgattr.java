@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.GameRules;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,8 +27,10 @@ public class Rpgattr implements ModInitializer {
 	public static final boolean REA_INSTALLED = FabricLoader.getInstance().isModLoaded("reach-entity-attributes");
 	public static final boolean ZEPHYR_INSTALLED = FabricLoader.getInstance().isModLoaded("zephyr");
 	public static final boolean ZENITHATTR_INSTALLED = FabricLoader.getInstance().isModLoaded("zenith_attributes");
-
 	public static GameRules.Key<GameRules.BooleanValue> ALLOW_VANILLA_CRITS; //this would be set here, but for some reason that causes issues
+
+	public static Player currentCriticalHitter; //only used when Zenith Attributes and Botania is installed -- DOESN'T WORK SEE #2
+
 	@Override
 	public void onInitialize() {
 		LOGGER.info("[RPGAttr] AEA Installed: " + AEA_INSTALLED

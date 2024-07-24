@@ -16,7 +16,7 @@ public class AttributesMixin {
     @Inject(method = "<clinit>", at = @At("TAIL"))
     private static void rpgattr_static_tail(CallbackInfo info) {
         CompatibleAttributeFinder.init();
-        Rpgattr.LOGGER.info("RPGAttr found " + Rpgattr.attributesToRegister.size() + "attributes to register:");
+        Rpgattr.LOGGER.info("RPGAttr found " + Rpgattr.attributesToRegister.size() + " attributes to register:");
         for(Rpgattr.CompatibleAttribute ca : Rpgattr.attributesToRegister){
             Rpgattr.LOGGER.info(String.valueOf(ca.resourceLocation()));
             if (BuiltInRegistries.ATTRIBUTE.containsKey(ca.resourceLocation())) {
