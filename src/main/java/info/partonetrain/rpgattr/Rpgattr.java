@@ -28,7 +28,7 @@ public class Rpgattr implements ModInitializer {
 	public static final boolean ZEPHYR_INSTALLED = FabricLoader.getInstance().isModLoaded("zephyr");
 	public static final boolean ZENITHATTR_INSTALLED = FabricLoader.getInstance().isModLoaded("zenith_attributes");
 	public static GameRules.Key<GameRules.BooleanValue> ALLOW_VANILLA_CRITS; //this would be set here, but for some reason that causes issues
-
+	public static GameRules.Key<GameRules.BooleanValue> DISABLE_DIFFICULTY_DAMAGE_SCALING;
 	public static Player currentCriticalHitter; //only used when Zenith Attributes and Botania is installed -- DOESN'T WORK SEE #2
 
 	@Override
@@ -41,6 +41,7 @@ public class Rpgattr implements ModInitializer {
 		);
 
 		ALLOW_VANILLA_CRITS = GameRuleRegistry.register("vanillaCrits", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
+		DISABLE_DIFFICULTY_DAMAGE_SCALING = GameRuleRegistry.register("difficultyDamageScaling", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
 	}
 
 	public static void addAttributeToCompat(ResourceLocation resourceLocation, Attribute attribute) {

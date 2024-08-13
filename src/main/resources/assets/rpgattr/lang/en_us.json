@@ -1,3 +1,4 @@
 {
-  "gamerule.vanillaCrits": "Vanilla (falling) Crits"
+  "gamerule.vanillaCrits": "Vanilla (falling) Crits",
+  "gamerule.difficultyDamageScaling": "Difficulty Damage Scaling"
 }
