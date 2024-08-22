@@ -12,7 +12,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(AdditionalEntityAttributes.class)
 public class AdditionalEntityAttributesMixin {
-
     @Inject(method = "register", at = @At(value = "RETURN"), cancellable = true)
     private static void rpgattr_cancel_aea_reg(String name, double base, double min, double max, CallbackInfoReturnable<Attribute> cir, @Local Attribute attribute) {
         Rpgattr.addAttributeToCompat(new ResourceLocation("additionalentityattributes", name), attribute);

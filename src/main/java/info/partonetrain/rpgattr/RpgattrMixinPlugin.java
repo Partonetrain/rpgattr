@@ -41,6 +41,10 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.ZENITHATTR_INSTALLED;
         }
 
+        if (mixinClassName.contains("Rogues")) {
+            return Rpgattr.ROGUES_INSTALLED;
+        }
+
         return true;
     }
 

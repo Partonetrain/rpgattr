@@ -12,6 +12,7 @@
     "PlayerMixin",
     "ReachEntityAttributesMixin",
     "ZenithAttributesBotaniaCritMixin",
+    "ZenithAttributesCritMixin",
     "ZenithAttributesMixin"
   ],
   "injectors": {

@@ -1,4 +1,5 @@
 {
   "gamerule.vanillaCrits": "Vanilla (falling) Crits",
-  "gamerule.difficultyDamageScaling": "Difficulty Damage Scaling"
+  "gamerule.difficultyDamageScaling": "Difficulty Damage Scaling",
+  "gamerule.zenithCritsMeleeOnly": "Zenith Crits Only Effect Melee"
 }

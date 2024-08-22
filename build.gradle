@@ -69,6 +69,8 @@ dependencies {
 
 	modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_ver}")
 	modImplementation("maven.modrinth:AdditionalEntityAttributes:${project.aea_ver}")
+
+	modImplementation("maven.modrinth:rogues-and-warriors:${project.rogues_version}")
 }
 
 processResources {
