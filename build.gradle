@@ -71,6 +71,8 @@ dependencies {
 	modImplementation("maven.modrinth:AdditionalEntityAttributes:${project.aea_ver}")
 
 	modImplementation("maven.modrinth:rogues-and-warriors:${project.rogues_version}")
+
+	modImplementation("maven.modrinth:cia:2.0.0")
 }
 
 processResources {

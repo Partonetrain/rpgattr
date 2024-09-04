@@ -6,6 +6,8 @@ import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleFactory;
 import net.fabricmc.fabric.api.gamerule.v1.GameRuleRegistry;
 import net.fabricmc.loader.api.FabricLoader;
+import net.fabricmc.loader.api.Version;
+import net.fabricmc.loader.api.metadata.ModMetadata;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -33,6 +35,8 @@ public class Rpgattr implements ModInitializer {
 	public static final boolean ROGUES_INSTALLED = FabricLoader.getInstance().isModLoaded("rogues");
 	public static final boolean ZEPHYR_INSTALLED = FabricLoader.getInstance().isModLoaded("zephyr");
 	public static final boolean ZENITHATTR_INSTALLED = FabricLoader.getInstance().isModLoaded("zenith_attributes");
+	public static final boolean CIA_INSTALLED = FabricLoader.getInstance().isModLoaded("customitemattributes");
+	public static Version ciaVersion = null;
 	public static GameRules.Key<GameRules.BooleanValue> ALLOW_VANILLA_CRITS; //this would be set here, but for some reason that causes issues
 	public static GameRules.Key<GameRules.BooleanValue> DISABLE_DIFFICULTY_DAMAGE_SCALING;
 	public static GameRules.Key<GameRules.BooleanValue> ZENITH_CRITS_MELEE_ONLY;
@@ -48,6 +52,10 @@ public class Rpgattr implements ModInitializer {
 				+ " Zephyr Installed: " + ZEPHYR_INSTALLED
 				+ " ZenithAttr Installed: " + ZENITHATTR_INSTALLED
 		);
+
+		if(CIA_INSTALLED){
+			ciaVersion = FabricLoader.getInstance().getModContainer("customitemattributes").get().getMetadata().getVersion();
+		}
 
 		ALLOW_VANILLA_CRITS = GameRuleRegistry.register("vanillaCrits", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
 		DISABLE_DIFFICULTY_DAMAGE_SCALING = GameRuleRegistry.register("difficultyDamageScaling", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));

@@ -45,6 +45,10 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.ROGUES_INSTALLED;
         }
 
+        if (mixinClassName.contains("CIA")) {
+            return Rpgattr.CIA_INSTALLED;
+        }
+
         return true;
     }
 
