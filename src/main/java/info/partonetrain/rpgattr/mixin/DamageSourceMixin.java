@@ -18,7 +18,7 @@ public class DamageSourceMixin {
 
     @Inject(method = "scalesWithDifficulty()Z", at=@At("HEAD"), cancellable = true)
     private void rpgattr_disable_scaling_gamerule(CallbackInfoReturnable<Boolean> cir){
-        if(causingEntity != null && !causingEntity.level().isClientSide && !causingEntity.level().getGameRules().getBoolean(Rpgattr.DISABLE_DIFFICULTY_DAMAGE_SCALING)){
+        if(causingEntity != null && !causingEntity.level().isClientSide && !causingEntity.level().getGameRules().getBoolean(Rpgattr.DIFFICULTY_DAMAGE_SCALING)){
             cir.setReturnValue(false);
             cir.cancel();
         }

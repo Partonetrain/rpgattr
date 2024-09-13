@@ -1,5 +1,5 @@
 plugins {
-	id 'fabric-loom' version '1.5-SNAPSHOT'
+	id 'fabric-loom' version '1.7-SNAPSHOT'
 	id 'maven-publish'
 }
 
@@ -70,7 +70,11 @@ dependencies {
 	modImplementation("com.jamieswhiteshirt:reach-entity-attributes:${project.rea_ver}")
 	modImplementation("maven.modrinth:AdditionalEntityAttributes:${project.aea_ver}")
 
-	modImplementation("maven.modrinth:rogues-and-warriors:${project.rogues_version}")
+	modImplementation("maven.modrinth:rpgdifficulty:${project.rpgdifficulty_version}")
+	modImplementation("maven.modrinth:artifacts:${project.artifacts_version}")
+	modImplementation("maven.modrinth:trinkets:3.7.2")
+
+
 }
 
 processResources {

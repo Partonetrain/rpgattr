@@ -26,6 +26,10 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.AEA_INSTALLED;
         }
 
+        if (mixinClassName.contains("Artifacts")) {
+            return Rpgattr.ARTIFACTS_INSTALLED;
+        }
+
         if (mixinClassName.contains("Botania")) {
             if(mixinClassName.contains("Zenith")) { //for ZenithAttributesBotaniaCritMixin
                 return Rpgattr.ZENITHATTR_INSTALLED && Rpgattr.BOTANIA_INSTALLED;
@@ -41,8 +45,8 @@ public class RpgattrMixinPlugin implements IMixinConfigPlugin {
             return Rpgattr.ZENITHATTR_INSTALLED;
         }
 
-        if (mixinClassName.contains("Rogues")) {
-            return Rpgattr.ROGUES_INSTALLED;
+        if (mixinClassName.contains("RPGDifficulty")) {
+            return Rpgattr.RPGDIFFICULTY_INSTALLED;
         }
 
         return true;
